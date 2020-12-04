@@ -271,7 +271,50 @@ static NSString *const SUUpdateAlertTouchBarIndentifier = @"" SPARKLE_BUNDLE_IDE
         self.laterButton.enabled = NO;
         self.laterButton.hidden = YES;
     }
+
+    if ([self hideAutomaticallyInstallUpdatesButton]) {
+        self.automaticallyInstallUpdatesButton.hidden = YES;
+    }
+
+    if ([self hideSkipButton]) {
+        self.skipButton.hidden = YES;
+    }
+
+    if ([self hideLaterButton]) {
+        self.laterButton.hidden = YES;
+    }
+
     [self.window center];
+}
+
+- (BOOL)hideAutomaticallyInstallUpdatesButton {
+    NSNumber *hideAutomaticallyInstallUpdatesButton = [self.host objectForInfoDictionaryKey:SUHideAutomaticallyInstallUpdatesButtonKey];
+    if (hideAutomaticallyInstallUpdatesButton == nil)
+    {
+        return false;
+    }
+
+    return [hideAutomaticallyInstallUpdatesButton boolValue];
+}
+
+- (BOOL)hideSkipButton {
+    NSNumber *hideSkipButton = [self.host objectForInfoDictionaryKey:SUHideSkipButtonKey];
+    if (hideSkipButton == nil)
+    {
+        return false;
+    }
+
+    return [hideSkipButton boolValue];
+}
+
+- (BOOL)hideLaterButton {
+    NSNumber *hideLaterButton = [self.host objectForInfoDictionaryKey:SUHideLaterButtonKey];
+    if (hideLaterButton == nil)
+    {
+        return false;
+    }
+
+    return [hideLaterButton boolValue];
 }
 
 - (BOOL)automaticChecksEnabled {

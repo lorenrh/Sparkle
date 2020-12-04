@@ -50,6 +50,10 @@ NSString *const SUFixedHTMLDisplaySizeKey = @"SUFixedHTMLDisplaySize";
 NSString *const SUDefaultsDomainKey = @"SUDefaultsDomain";
 NSString *const SUSparkleErrorDomain = @"SUSparkleErrorDomain";
 
+NSString *const SUHideAutomaticallyInstallUpdatesButtonKey = @"SUHideAutomaticallyInstallUpdates";
+NSString *const SUHideSkipButtonKey = @"SUHideSkipButton";
+NSString *const SUHideLaterButtonKey = @"SUHideLaterButton";
+
 NSString *const SUAppendVersionNumberKey = @"SUAppendVersionNumber";
 NSString *const SUEnableAutomatedDowngradesKey = @"SUEnableAutomatedDowngrades";
 NSString *const SUNormalizeInstalledApplicationNameKey = @"SUNormalizeInstalledApplicationName";
